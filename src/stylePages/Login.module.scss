@@ -1,0 +1,67 @@
+@import '../globalStyle/variable.scss';
+
+.container{
+    position: fixed;
+    top: 0;right: 0;left: 0;bottom: 0;
+    object-fit: cover;
+    font-family: $fontFamil;
+    background-image: url('../assets/image/imgLogin.jpg');
+    display: flex;justify-content: center;align-items: center;
+    line-height: 3;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+.wraper{
+    width: 450px;
+    height: 450px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+.title{
+    display: flex;flex-direction: column;
+    align-items: center;
+}
+.inputPhone,.inputPassWord {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: $font_size_pc;
+    padding-left: 8px;
+    border: none;
+}
+.inputPhone{
+    margin: 30px 0px 20px 0;
+}.login{
+    color: $color_text;
+
+}
+.wraperInput{
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.messagePhone{
+    font-family: $fontFamil;
+    color: $color_text;
+    font-size: 15px;
+    transform: translate(10px,-10px);
+    display: none;
+}
+.messagePass{
+    font-family: $fontFamil;
+    color: $color_text;
+    font-size: 15px;
+    transform: translate(10px,10px);
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .container{
+        
+        padding: 0 20px;
+    }
+}

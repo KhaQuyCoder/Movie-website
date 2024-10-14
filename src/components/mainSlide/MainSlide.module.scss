@@ -1,0 +1,78 @@
+@import '../../globalStyle/variable.scss';
+@import '../../globalStyle/mixin.scss';
+
+
+.container {
+    overflow: hidden; 
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+}
+  
+  .slider {
+    display: flex;
+    width: 100%;
+  }
+  
+  .wraper {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+.content{
+    position: absolute;
+    bottom: 0px;
+    height: 80px;
+    color: $color_text;
+    width: 100%;
+    padding:10px 0 0 40px;
+    line-height: 1;
+    background-color: rgba(0,0,0,0.6);
+}
+.nextSlide,.backSlide{
+  font-size: 2.2rem;
+  background-color: rgba(0,0,0,0.6);
+  color: $bcg_full_web;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color:$color_main;
+  display: flex;align-items: center;justify-content: center;
+  cursor: pointer;
+  &:hover{
+    background-color: $color_text;
+  }
+}
+.backSlide{
+  position: absolute;
+  left: 10px;
+}
+@media screen and (max-width:900px) {
+
+    .content{
+        font-size: 10px;
+        line-height: 1.4;
+        color: $color_text;
+
+    }
+    .year{
+        font-size: 18px;
+    }
+    .nextSlide,.backSlide{
+      font-size: 1.4rem;
+      background-color: transparent;
+      background-color: rgba(0,0,0,0.6);
+      width: 40px;
+      height: 40px;
+    }
+}
+

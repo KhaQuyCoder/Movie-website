@@ -1,0 +1,110 @@
+@import '../../globalStyle/variable.scss';
+
+.container{
+    background-color: black;
+    font-family: $fontFamil;    
+    width: 100%; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    overflow-x: hidden;
+    border-top: 1px solid $color_main;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.wraper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    padding: 30px 30px;
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+.title{
+    color: $color_main;
+}
+.titlee{
+    transform: translateY(-15px);
+    color: $color_main;
+}
+.infor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copyRight{
+    color: $color_main;
+    padding: 20px 20px;
+}
+.my{
+    font-size: $font_size_pc;
+    color: $colotext_header;
+}
+.lorem{
+    font-family: $fontFamil;
+    font-size: $fontFamil;
+    color: $colotext_header;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.AboutMy
+{
+    margin-top: 15px;
+}
+.technology{
+    margin-top: -16px;
+}
+
+
+@media screen and (max-width:400px) {
+    .wraper{
+        grid-template-columns: 1fr;
+        justify-items: start;
+        font-size: 15px;
+    }
+    .title{
+        margin-top: 15px;
+    }
+    .my{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:401px) and (max-width:600px) {
+    .wraper{
+        grid-template-columns: 1fr;
+        justify-items: start;
+        font-size: 15px;
+    }
+    .title{
+        margin-top: 15px;
+    }
+    .my{
+        font-size: 15px;
+    }
+
+}
+@media screen and (min-width:601px) and (max-width:900px) {
+    .wraper{
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+    .title{
+        margin-top: 15px;
+    }
+
+}
+@media screen and (min-width:901px) and (max-width:1100px) {
+    .wraper{
+        column-gap: 30px;
+    }
+
+}
+@media screen and (min-width:1101px) and (max-width:1350px) {
+  .wraper{
+        column-gap: 30px;
+    }
+}

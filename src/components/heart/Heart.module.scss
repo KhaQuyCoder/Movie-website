@@ -1,0 +1,84 @@
+@import '../../globalStyle/variable.scss';
+.main{
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.title{
+    color: white;
+    font-size:20px;
+    width: max-content;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $color_main;
+    color: $color_main;
+    font-family: $fontFamil;
+    margin-top: 40px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .th, .td{
+    padding: 12px 15px;
+    color: #f9f9f9;
+  }
+  
+  .thh{
+    text-align: start;
+  }
+  .th,.thh {
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+  }
+.data{
+    color: wheat;
+    padding: 20px 0 ;
+    border-bottom: 1px solid gray;
+}
+.imgHeart{
+    width: 90px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.name{
+    font-size: $font_size_pc;
+    margin-left: 10px;
+    color: wheat;
+}
+.nameHeart{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:700px) {
+  .main{
+    padding: 0 10px;
+  }
+  .table {
+    width: 100%;
+    font-size: 15px;
+  }
+  .imgHeart{
+    width: 50px;
+    height: 70px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+  .name{
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (min-width:701px) and (max-width:1400px) {
+  .main{
+    padding: 0 30px;
+  }
+}

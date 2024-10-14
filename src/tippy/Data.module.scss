@@ -1,0 +1,71 @@
+@import '../globalStyle/variable.scss';
+.listItemPc,.listItemPcIsLogin{
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5;
+    width: 240px;
+    height: 200px;
+    background-color: $bcg_full_web;
+    font-size: $font_size_pc;
+    justify-content: center;
+    text-align: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.itemData{
+    text-decoration: none;
+    width: 100%;
+    color: $colotext_header;
+    font-weight: $font_weight;
+    &:hover{
+        color: $color_main;
+    }
+}
+.option{
+    display: flex;
+    flex-direction: column;
+}
+.toLink{
+    text-decoration: none;
+    font-weight: $font_weight;
+    color: $colotext_header;
+    width: 100%;
+    &:hover{
+        background-color: rgba(0,0,0,0.3);
+        color: $color_main;
+    }
+}
+.itemDataLoginn{
+    text-decoration: none;
+    font-weight: $font_weight;
+    color: $colotext_header;
+    cursor: pointer;
+    width: 100%;
+    &:hover{
+        background-color: rgba(0,0,0,0.3);
+        color: $color_main;
+    }
+}
+.wraper{
+    width: 100%;
+}
+.listItemPcIsLogin::before {
+    content: ''; 
+    position: absolute; 
+    top: -10px; 
+    left: 90%; 
+    transform: translateX(-50%);
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    border-bottom: 10px solid $bcg_full_web; 
+}
+.back{
+    font-size: 20px;
+    color: $colotext_header;
+    cursor: pointer;
+    padding-top: 10px;
+    justify-content: start;
+    display: none;
+}

@@ -1,0 +1,113 @@
+@import '../../globalStyle/variable.scss';
+@import '../../globalStyle/mixin.scss';
+
+
+.wraper{
+    display: flex;
+    align-items: center;
+    font-family: $fontFamil;
+}
+.infor{
+    width: 600px;
+    height:150px;
+    border: 1px solid $colotext_header;
+    border-radius: 20px;
+    line-height: 2;
+    margin-left: 30px;
+}
+.imgProfile{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.emailProfile{
+    font-size:$font_size_pc;
+    color: $color_main;
+    padding-left: 20px;
+}
+.edit{
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: $colotext_header;
+    &:hover{
+        color: $color_main;
+    }
+}
+.arreaEdit{
+    width: 100%;
+    height: 340px;
+    border: 1px solid $colotext_header;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.form{
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: repeat(2,1fr);
+}
+.btn{
+    width: 620px;
+    height: 40px;
+    border-radius: 6px;
+    margin-top: 30px;
+    background-color: #292E38;
+    border: none;
+    font-size: $font_size_pc;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.9;
+    }
+}
+.passText,.emailText{
+    font-size: $font_size_pc;
+    color: $colotext_header;
+    margin: 0 0 5px 5px;
+}
+
+.inputProfile{
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-family: $fontFamil;
+    font-size: $font_size_pc;
+    background-color: #292E38;
+    color: white;
+}
+@media screen and (max-width:700px) {
+    .container {
+        padding: 0 10px;
+        margin-top: 120px;
+        overflow: hidden;
+    }
+    .wraper{
+        flex-direction: column;
+    }
+    .infor{
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+    .btn{
+        width: 250px;
+    }
+    .inputProfile{
+        width: 100%;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    .arreaEdit{
+        height: 360px;
+    }
+}

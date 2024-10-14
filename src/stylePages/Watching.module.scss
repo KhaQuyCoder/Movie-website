@@ -1,0 +1,222 @@
+
+@import '../globalStyle/variable.scss';
+.videoContainer {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin-top: 100px;
+
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1000px 400px;
+    column-gap: 30px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .video {
+    width: 100%;
+    margin-top: 20px;
+    height: 550px;
+    border: 1px solid black;
+  }
+  
+   .poster {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    margin-top: 20px;
+    object-fit: cover;
+  }
+  .play{
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    font-size: 2.4rem;
+    color: $color_main;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .numberEpisode{
+    background-color: black;
+    width: 40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $color_main;
+    border: 1px solid $color_main;
+  }
+  .listEpisode{
+    padding-top: 110px;
+  }
+  .episodes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      width: 3px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: $color_main;
+      border-radius: 14px;
+    }
+  }
+  .title{
+    font-size: 20px;
+     color: $color_main;
+     font-family: $fontFamil;
+     padding: 10px 0 5px 0;
+     margin-bottom: 30px;
+     width: max-content;
+     border-bottom: 1px solid $color_main;
+  }
+  .infors{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .name{
+    font-family: $fontFamil;
+    color: $color_text;
+    font-size: 23px;
+    padding: 10px;
+    margin-left: -10px;
+  }
+  .nation,
+.category,
+.year,
+.content{
+  font-family: $fontFamil;
+  font-size: 20px;
+  color: $color_text;
+  padding: 10px 0;
+}
+.nation > span,
+.category > span,
+.year > span{
+  font-size: 15px;
+  width: max-content;
+  height: max-content;
+  padding: 5px 5px;
+  background-color: black;
+  color: $color_main;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.content > span{
+  font-size: 16px;
+  line-height: 0;
+  font-family: $fontFamil;
+  line-height: 1.8;
+  color: $colotext_header;
+}
+.listActor{
+  display: flex;
+  flex-wrap: wrap;
+}
+.nameActor{
+  width: max-content;
+  height: max-content;
+  background-color: black;
+  color: $color_main;
+  font-family: $fontFamil;
+  font-size: 16px;
+  padding: 10px 10px;
+  margin: 10px 20px;
+  margin-left: -10px;
+  flex-wrap: wrap;
+  border: 1px solid $color_main;
+}
+.heart{
+  width: 70px;
+  height: 40px;
+  border: 1px solid $color_main;
+  display: inline-flex;justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  cursor: pointer;  
+}
+
+  @media screen and (max-width:600px) {
+    .videoContainer{
+      width: 100%;
+      height: 100%;
+    }
+    .video{
+      height: 200px;
+      border: 1px solid black;
+    }
+    .container{
+      grid-template-columns: 1fr;
+      place-items: start;
+      padding: 0 20px;
+    }
+    .listEpisode{
+      padding: 0;
+    }
+    .infors{
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+    .numberEpisode{
+      margin: 6px 6px;
+    }
+    .title{
+      padding-top: 20px;
+    }
+  }
+  @media screen and (min-width:601px)  and (max-width:1000px){
+    .videoContainer{
+      width: 100%;
+      height: 100%;
+    }
+    .video{
+      height: 350px;
+      border: 1px solid black;
+    }
+    .container{
+      grid-template-columns: 1fr;
+      place-items: start;
+      padding: 0 20px;
+    }
+    .listEpisode{
+      padding: 0;
+    }
+    .infors{
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+    .title{
+      padding-top: 20px;
+    }
+  }
+  @media screen and (min-width:1001px) and (max-width:1400px) {
+    .videoContainer{
+      width: 100%;
+      height: 100%;
+    }
+    .container{
+      grid-template-columns: 1fr;
+      place-items: start;
+      padding: 0 20px;
+    }
+    .episodes{
+      height: max-content;
+    }
+    .listEpisode{
+      padding: 0;
+    }
+    .infors{
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+  }
